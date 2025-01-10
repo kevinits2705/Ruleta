@@ -1609,6 +1609,11 @@ supports-color@^7.1.0:
   dependencies:
     has-flag "^4.0.0"
 
+sweetalert2@^11.15.10:
+  version "11.15.10"
+  resolved "https://registry.yarnpkg.com/sweetalert2/-/sweetalert2-11.15.10.tgz#315ed4d0933bb1b6fbd7d0daf3d160bd3cc78b64"
+  integrity sha512-Sjiwcd5mWiz8X0JFkHsso2EPVQHrLCjVv+xR6Ry2LKf4KY6kSi4U5pM0Tgmn1c7SMfkyDqPal2NWqwj6vck8bw==
+
 to-regex-range@^5.0.1:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/to-regex-range/-/to-regex-range-5.0.1.tgz#1648c44aae7c8d988a326018ed72f5b4dd0392e4"

@@ -1,0 +1,8 @@
+body {
+    background-image: url('https://cdn.svgator.com/images/2022/06/use-svg-as-background-image-particle-strokes.svg');
+    background-size: cover; /* Ajusta el tamaño del fondo para cubrir toda la pantalla */
+    background-position: center; /* Centra la imagen en el fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    height: 100vh; /* Ajusta la altura del cuerpo al 100% de la altura de la ventana */
+    color: aliceblue!important; /* Cambia el color del texto a blanco */
+  }

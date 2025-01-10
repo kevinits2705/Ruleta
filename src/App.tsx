@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Wheel } from "react-custom-roulette";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Participants } from "./components/Participants";
+import Swal from "sweetalert2";
 
 const App = () => {
   const [participants, setParticipants] = useState<{ option: string }[]>([]);
@@ -58,8 +59,18 @@ const App = () => {
     setParticipants([]);
   };
 
+  const handleStopSpinning = () => {
+    setMustSpin(false);
+    Swal.fire({
+      title: "¡El ganador es!",
+      text: participants[prizeNumber].option,
+      icon: "success",
+      confirmButtonText: "OK",
+    });
+  };
+
   return (
-    <div className="container mt-5">
+    <div className="container mt-2">
       <h1 className="text-center">Ruleta de la Suerte</h1>
       <div className="d-flex justify-content-center">
         <form
@@ -81,7 +92,7 @@ const App = () => {
         </form>
       </div>
       <div className="row">
-        <div className="col-12 col-md-8">
+        <div className="col-12 col-md-9">
           <div className="mt-4 d-flex flex-column align-items-center">
             {participants.length > 0 ? (
               <Wheel
@@ -96,7 +107,7 @@ const App = () => {
                 textColors={["#000"]}
                 fontSize={15}
                 backgroundColors={["#FFCCB6", "#FF6666", "#6A9AE2", "#FFD700"]}
-                onStopSpinning={() => setMustSpin(false)}
+                onStopSpinning={handleStopSpinning}
               />
             ) : (
               <p className="text-center mt-4">
@@ -129,12 +140,10 @@ const App = () => {
           participants={participants}
         />
       </div>
-
-      {mustSpin === false && participants.length > 0 && (
-        <div className="alert alert-success mt-3 text-center">
-          Ganador: {participants[prizeNumber]?.option}
-        </div>
-      )}
+      <div className="text-center mt-4">
+        <h3>Creado por Team SIT </h3>
+        <h3>2025</h3>
+      </div>
     </div>
   );
 };
