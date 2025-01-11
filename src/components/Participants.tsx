@@ -5,7 +5,12 @@ export const Participants = ({
   return (
     <>
       <div className="col-12 col-md-3">
-        <div className="d-flex justify-content-center align-items-center">
+        <div className="d-flex justify-content-center align-items-center mt-2">
+          <a href="/winner" className="btn btn-dark">
+            Configuraciones
+          </a>
+        </div>
+        <div className="d-flex justify-content-center align-items-center mt-2">
           <button
             className="btn btn-danger"
             onClick={handleResetParticipants}
